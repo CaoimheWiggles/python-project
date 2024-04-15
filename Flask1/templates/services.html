@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Strong Minds Therapy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />	
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/static/images/favicon1.png">
+<script src="https://kit.fontawesome.com/d4f86a21e7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div id="header">
+        
+          <h1 class="heading">Strong Minds Therapy</h1>
+        
+          
+      </div>
+      
+
+<nav>
+    <div class="mid">
+      <ul id="navbar">
+        <li><a href="{{ url_for('index') }}" >Home</a></li>
+        <li><a href="{{ url_for('about') }}">My Story</a></li>
+        <li><a href="{{ url_for('services') }}">Services</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+        <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </div>
+</nav>
+<br>
+
+
+<div class="content">
+
+<h1>Services</h1>
+
+<ul id="python-list">
+  {% for service in services %}
+      <li>
+          <h2>{{ service['name'] }}</h2>
+          <p>{{ service['description'] }}</p>
+      </li>
+  {% endfor %}
+</ul>
+
+<div class="service-container">
+   
+    <div class="service-content">
+        <div class="service-text">
+            <h2 class="services-heading">Individual Therapy</h2>
+            <p>Individual therapy, also known as counseling or psychotherapy, offers a confidential and supportive 
+                space for individuals to address emotional challenges and improve their overall well-being.
+                 Despite initial hesitations, therapy provides a valuable opportunity for self-discovery and growth.
+                <br><br>
+                Through therapy, individuals gain insight into their thoughts and behaviors, learn effective coping
+                strategies, and manage mental health concerns like stress, anxiety, and depression. Sessions are
+                personalized to meet each individual's needs, empowering them to navigate life's challenges and
+                build resilience.
+                <br><br>
+                Sessions typically last 60 minutes, but clients have the flexibility to adjust session lengths 
+                based on their needs. Therapists prioritize client comfort and well-being, ensuring a supportive 
+                and empowering therapeutic experience.
+                </p>
+        </div>
+        <div class="service-images">
+            <img src="/static/images/individual.jpg" alt="man writing">
+            <img src="/static/images/service-img1.jpg" alt="man on couch">
+        </div>
+    </div>
+</div>
+
+<div class="service-container white-background">
+    <div class="service-content">
+        <div class="service-images">
+            <img src="/static/images/couples.jpg" alt="couple on couch">
+            <img src="/static/images/couples2.jpg" alt="couple at therapy">
+        </div>
+        <div class="service-text">
+            <h2 class="services-heading">Couples Therapy</h2>
+            <p>Couples therapy offers a supportive environment for partners to explore their relationship dynamics
+                 and resolve conflicts constructively. By fostering open communication and understanding, couples
+                  can address underlying issues and strengthen their connection. With the guidance of a trained 
+                  therapist, couples learn valuable tools to navigate challenges and cultivate a healthier, more 
+                  fulfilling relationship.
+                <br><br>
+                In couples therapy, partners collaborate to identify shared goals and work towards mutual 
+                understanding and compromise. Therapy sessions provide a safe space for partners to express their needs and concerns, leading 
+                 to greater intimacy and emotional fulfillment.
+                <br><br>
+                Couples therapy is a proactive step towards building a resilient and thriving relationship. 
+                By investing in therapy, partners demonstrate their commitment to each other's well-being and
+                the health of their relationship. Through ongoing support and guidance, couples can deepen their 
+                connection, resolve conflicts, and cultivate a fulfilling partnership that withstands the test of 
+                time.</p>
+        </div>
+    </div>
+</div>
+<div class="service-container">
+   
+    <div class="service-content">
+        <div class="service-text">
+            <h2 class="services-heading">Adolescence Therapy</h2>
+            <p>Adolescence therapy provides teenagers with a safe and confidential space to explore their emotions, 
+                navigate challenges, and develop coping skills. With the guidance of a trained therapist, 
+                adolescents can address issues such as peer pressure, academic stress, identity development, school pressure
+                and family conflicts. Therapy helps teenagers build resilience, improve self-esteem, and develop
+                 healthy ways to cope with the pressures of adolescence.
+                <br><br>
+                Therapy sessions are tailored to meet the unique needs of teenagers, providing them with a 
+                supportive environment to express themselves and work through their concerns. By fostering open
+                 communication and trust, therapy empowers adolescents to overcome obstacles, develop positive 
+                 relationships, and navigate the transition to adulthood with confidence and resilience.
+                 <br><br>         
+                In the initial session, the counselor may meet with one or both parents for 10-20 minutes.
+                This allows parents to share their perspectives and concerns, if desired. Alternatively, adolescents
+                may opt to attend the first session alone. Parents may accompany their adolescent to sign consent forms, 
+                emphasizing the importance of confidentiality. 
+                Family therapy may be recommended based on individual needs.
+                </p>
+        </div>
+        <div class="service-images">
+            <img src="/static/images/teenage.jpg" alt="teen in therapy">
+            <img src="/static/images/teenage2.jpg" alt="anxious boy">
+        </div>
+    </div>
+</div>
+
+
+<div class="service-container table">
+<h4 class="pricing">Pricing</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Single Session</th>
+      <th>4 Sessions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Individual Therapy</td>
+      <td>€100</td>
+      <td>€350</td>
+    </tr>
+    <tr>
+      <td>Couples Therapy</td>
+      <td>€150</td>
+      <td>€500</td>
+    </tr>
+    <tr>
+      <td>Adolescence Therapy</td>
+      <td>€80</td>
+      <td>€300</td>
+    </tr>
+  </tbody>
+</table>
+<a href="{{ url_for('contact') }}" class="button" id="book-btn">Contact to Book</a>
+</div>
+
+<h1>Taster Session</h1>
+<div>
+  <h2 class="intro">Free 30 minute introduction to therapy</h2>
+  
+  <div class="form-container">
+    <form action="{{ url_for('services') }}" method="post" onsubmit="return showThankYouMessage()">
+        <input type="hidden" name="services" value="Individual Therapy">
+      
+        <label for="date_individual">Select Date:</label>
+        <input type="date" id="date_individual" name="date" required
+               min="{{ min_date }}"
+               max="{{ max_date }}"><br>
+        
+        <label for="time_individual">Select Time:</label>
+        <select id="time_individual" name="time" required>
+            {% for hour in range(8, 18) %}
+                {% for minute in ['00', '30'] %}
+                    {% set time = "%02d:%s" % (hour, minute) %}
+                    <option value="{{ time }}">{{ time }}</option>
+                {% endfor %}
+            {% endfor %}
+        </select><br>
+        <label for="name_individual">Your Name:</label>
+        <input type="text" id="name_individual" name="name" required><br>
+
+        <label for="email_individual">Your Email:</label>
+        <input type="email" id="email_individual" name="email" required><br>
+        
+        <label for="contact_number">Contact Number:</label>
+        <input type="tel" id="contact_number" name="contact_number" required><br>
+
+        <input type="submit" value="Book Appointment">
+    </form>
+</div>
+</div>
+</div>
+
+
+<footer id="footer">
+    <div class="footer-content">
+      <p class="copyright">&copy; 2024 Strong Minds Therapy. All rights reserved.</p>
+    </div>
+    <div class="footer-content">
+      <a class="footer-email" href="mailto:strongmindstherapy@gmail.com">
+        <i class="fa-regular fa-envelope"></i> 
+        strongmindstherapy@gmail.com
+      </a>
+    </div>
+  </footer>
+    
+  <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>
+

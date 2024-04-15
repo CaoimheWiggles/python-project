@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />	
+    <title>Thank You!</title>
+</head>
+<body>
+
+<div class="thank-you-container">
+    <h1 class="thanks-heading">Thank You!</h1>
+    <p class="thanks-p">Thank you</p>
+    <button class="go-back" onclick="window.location.href='{{ url_for('index') }}'">Back to Website</button>
+</div>
+</body>
+</html>
