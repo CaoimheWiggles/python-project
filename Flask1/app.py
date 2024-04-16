@@ -1,7 +1,7 @@
-from flask import Flask, url_for, render_template, redirect, request
+from flask import Flask1, url_for, render_template, redirect, request
 from datetime import datetime, timedelta
 
-app = Flask(__name__, template_folder='templates', static_folder='static')
+app = Flask1(__name__, template_folder='templates', static_folder='static')
 
 
 def calculate_min_max_dates():
