@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <title>Strong Minds Therapy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+rel="stylesheet">
+<script src="https://kit.fontawesome.com/d4f86a21e7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    
+<div id="container">
+
+    <div id="header">
+      
+          <h1 class="heading">Strong Minds Therapy</h1>
+         
+          
+      </div>
+      
+<nav>
+  <div class="mid">
+    <ul id="navbar">
+      <li><a href="{{ url_for('index') }}" >Home</a></li>
+      <li><a href="{{ url_for('about') }}">My Story</a></li>
+      <li><a href="{{ url_for('services') }}">Services</a></li>
+      <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+      <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<br>
+
+
+<div class="content">
+
+    <h1> Hi, I'm John</h1>
+
+    <img src="{{ url_for('static', filename='images/portrait.jpg') }}" alt="my portrait" id="portrait">
+    <p class="attribute">Designed by Freepik</p>
+
+
+<p>Allow me to share my journey with you.</p>
+    <p class="story-paragraph"><br><br> My name is John, and I'm 42 years old. I'm married with two children. 
+    Fifteen years ago, on March 4th, 2009, I found myself on the brink of taking my own life. At the time, I was 
+    27 years old, with a newborn daughter and a three-year-old son. I believed it was the best course of action 
+    for them, my only way out. However, fate intervened. While my wife and children were out for the day, 
+    an unexpected event brought them home early, hindering my plans. Despite this setback, I couldn't shake the 
+    conviction that I would attempt it again later. Yet, that near-miss forced me to reconsider. 
+    I realized all the precious moments I would miss if I followed through. When my children returned home 
+    unexpectedly, my son's innocent joy upon seeing me shook me to my core. He had no idea of the darkness I
+    was battling, and his presence brought me back from the edge.</p>
+    
+    <p class="story-paragraph">All of this eventually prompted me to delve into therapy. While 2009 may not seem distant, therapy wasn't 
+    as readily available then as it is today. The notion of men seeking therapy was virtually unheard of. 
+    Nevertheless, I made the decision for the sake of my children. Initially, I felt ashamed, fearing I'd be 
+    perceived as weak and inadequate for my family. However, I couldn't have been more mistaken. Taking that 
+    initial step into therapy turned out to be the most courageous act I've ever undertaken—for both myself and
+    my family.
+    <br></p>
+    <p class="story-paragraph">Later, I crossed paths with Tom, who unfortunately passed away a couple of years after coming to my rescue. 
+    Tom lived a rich and lengthy life, and I owe him my eternal gratitude. He had weathered experiences much like 
+    my own and provided invaluable assistance in ways I struggle to articulate. This encounter motivated me to
+     pursue a career as a therapist. Through the sessions I shared with Tom, I gained profound insights, 
+    and now I'm committed to leveraging my personal struggles to offer aid to others in need.
+    </p>
+
+<h5>{{ therapist.name }}</h5>
+    <p class="python-about"><strong>Specialization:</strong> {{ therapist.specialization }}</p>
+    <p class="python-about">{{ therapist.description }}</p>
+    <img class="python-img" src="{{ therapist.image_url }}" alt="Therapist Image">
+</div>
+
+
+
+
+<footer id="footer">
+    <div class="footer-content">
+      <p class="copyright">&copy; 2024 Strong Minds Therapy. All rights reserved.</p>
+    </div>
+    <div class="footer-content">
+      <a class="footer-email" href="mailto:strongmindstherapy@gmail.com">
+        <i class="fa-regular fa-envelope"></i> 
+        strongmindstherapy@gmail.com
+      </a>
+    </div>
+  </footer>
+    
+  <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>

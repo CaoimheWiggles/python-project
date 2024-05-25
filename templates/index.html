@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+ 
+  <title>Strong Minds Therapy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="/static/images/favicon1.png">
+<script src="https://kit.fontawesome.com/d4f86a21e7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+
+
+ <!-- Popup -->
+
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+       
+       <p>Are you ready to become the strongest version of yourself?</p>
+      <button class="close-button">I'm in!</button> 
+    </div>
+  </div>
+
+
+<div id="header">
+  
+  <h1 class="heading">Strong Minds Therapy</h1>
+    
+</div>
+
+
+<!-- NAV -->
+
+<nav>
+  <div class="mid">
+    <ul id="navbar">
+      <li><a href="{{ url_for('index') }}" >Home</a></li>
+      <li><a href="{{ url_for('about') }}">My Story</a></li>
+      <li><a href="{{ url_for('services') }}">Services</a></li>
+      <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+      <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<br>
+<div class="content">
+  <div id="cloudimg">
+    <img src="{{ url_for('static', filename='images/clouds.jpg') }}" alt="peaceful clouds">
+    <div class="text-overlay">
+      <h2>Take the First Step Towards Healing</h2>
+      <p class="par">Take the first step towards a brighter future. Start your journey to inner strength today.</p>
+      <a href="{{ url_for('services') }}" class="button" id="myButton">Our Services</a>
+    </div>
+  </div>
+
+
+
+
+  <section class="content-section">
+    <div class="text">
+      <h4 class="index-head">Can you relate to any of these?</h4>
+    </div>
+    <div class="bullet-points">
+      <ul class="index-list">
+        <li class="fade-in"><strong class="bold">Mental Health Issues</strong>: Depression, anxiety, PTSD</li>
+        <li class="fade-in"><strong class="bold">Relationship Problems</strong>: Romantic, familial, or platonic difficulties</li>
+        <li class="fade-in"><strong class="bold">Work-related Stress</strong>: Career pressure, transitions, or conflicts</li>
+        <li class="fade-in"><strong class="bold">Grief and Loss</strong>: Coping with death or major life changes</li>
+        <li class="fade-in"><strong class="bold">Trauma</strong>: Childhood abuse, accidents, or combat experiences</li>
+        <li class="fade-in"><strong class="bold">Addiction</strong>: Substance abuse or other addictive behaviors</li>
+        <li class="fade-in"><strong class="bold">Self-esteem and Identity Issues</strong>: Body image, confidence, or personal values</li>
+        <li class="fade-in"><strong class="bold">Anger Management</strong>: Difficulty controlling anger or aggression</li>
+        <li class="fade-in"><strong class="bold">Parenting Challenges</strong>: Navigating co-parenting or adjusting to fatherhood</li>
+        <li class="fade-in"><strong class="bold">Cultural or Societal Expectations</strong>: Pressure to conform to masculine norms</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="image-text-section">
+    <div class="image-area">
+      <img src="/static/images/handshake.jpg" alt="handshake">
+    </div>
+    <div class="text-container">
+      <h4>Why Therapy?</h4>
+      <p>Therapy provides a safe, non-judgmental space where you can freely discuss and address overwhelming thoughts and emotions. Our aim is to support you in understanding and overcoming life's challenges, empowering you to navigate through difficult times with clarity and resilience.</p>
+    </div>
+  </section>
+</div>
+
+<div class="image-row">
+    <div class="image-item">
+        <img src="/static/images/individual.jpg" alt="Image 1">
+        <div class="text2">
+            <h3>Individual Therapy</h3>
+            <p>Individual therapy provides a confidential space for exploring personal issues and mental
+               health concerns with a trained therapist. Through one-on-one sessions, individuals can address challenges
+                such as stress, anxiety, relationships, and self-esteem,
+               while learning coping strategies and gaining insights to enhance their overall well-being.</p>
+        </div>
+    </div>
+    <div class="image-item">
+        <img src="/static/images/couples.jpg" alt="Image 2">
+        <div class="text2">
+            <h3>Couples Therapy</h3>
+            <p>Couples therapy offers a supportive environment for partners to address relationship issues and improve
+               communication skills. With the guidance of a therapist, couples work together to navigate challenges,
+               resolve conflicts, and strengthen their bond. By fostering understanding and promoting healthier dynamics, 
+              couples therapy aims to enhance the overall quality of the relationship.</p>
+        </div>
+    </div>
+    <div class="image-item">
+        <img src="/static/images/teenage.jpg" alt="teen">
+        <div class="text2">
+            <h3>Adolescence Therapy</h3>
+            <p>Adolescent therapy provides a safe space for teenagers to explore their emotions,
+               navigate challenges, and develop coping skills. Through counseling, adolescents can address issues 
+               such as anxiety, depression, peer pressure, and family conflicts. Therapists work collaboratively with teens to promote self-awareness, resilience, and healthy decision-making, 
+              empowering them to navigate the complexities of adolescence with confidence and clarity.</p>
+        </div>
+    </div>
+</div>
+<button class="learn-more-button" onclick="window.location.href='{{ url_for('services') }}'">Learn More</button>
+
+
+
+
+<footer id="footer">
+  <div class="footer-content">
+    <p class="copyright">&copy; 2024 Strong Minds Therapy. All rights reserved.</p>
+  </div>
+  <div class="footer-content">
+    <a class="footer-email" href="mailto:strongmindstherapy@gmail.com">
+      <i class="fa-regular fa-envelope"></i>
+      strongmindstherapy@gmail.com
+    </a>
+  </div>
+</footer>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

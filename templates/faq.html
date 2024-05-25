@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Strong Minds Therapy</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />	
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="favicon1.png">
+<script src="https://kit.fontawesome.com/d4f86a21e7.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="header">
+        
+          <h1 class="heading">Strong Minds Therapy</h1>
+         
+          
+      </div>
+      
+
+<nav>
+  <div class="mid">
+    <ul id="navbar">
+      <li><a href="{{ url_for('index') }}" >Home</a></li>
+      <li><a href="{{ url_for('about') }}">My Story</a></li>
+      <li><a href="{{ url_for('services') }}">Services</a></li>
+      <li><a href="{{ url_for('faq') }}">FAQ</a></li>
+      <li><a href="{{ url_for('testimonials') }}">Testimonials</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<br>
+<div class="content-sec">
+<div class="content">
+
+  <div id="contactimg">
+    <img src="{{ url_for('static', filename='images/faq.jpg') }}" alt="man thinking">
+    <div class="text-overlay">
+      <h1 class="faq-text">FAQ</h1>
+    </div>
+  </div>
+  
+      
+<div class="faq-container">
+    <dl>
+        <dt class="faq">What is therapy, and how can it benefit men?</dt>
+        <dd>Therapy offers men a chance to address mental health concerns, navigate life transitions,
+            and gain valuable insights into emotions and relationships. It's a proactive step towards self-discovery, personal growth, and resilience. 
+            By engaging in therapy, men can develop coping strategies, improve communication, and enhance overall well-being.
+            Therapy isn't about being "broken" or "weak"; it's about seeking support and guidance to become the 
+            best version of yourself. </dd>
+    
+            <dt class="faq">What types of issues can therapy help men with?</dt>
+            <dd>
+                <ul>
+                    <li>Stress and anxiety management</li>
+                    <li>Depression and mood disorders</li>
+                    <li>Relationship and communication issues</li>
+                    <li>Work-related stress or burnout</li>
+                    <li>Trauma and post-traumatic stress disorder (PTSD)</li>
+                    <li>Grief and loss</li>
+                    <li>Self-esteem and confidence building</li>
+                    <li>Anger management</li>
+                    <li>Life transitions and personal growth</li>
+                </ul>
+            </dd>
+
+        <dt class="faq">What happens during a therapy session?</dt>
+        <dd>In a therapy session, you're in the driver's seat. There's no pressure to talk about anything you're not comfortable with.
+            It's a space where you can simply be yourself, without judgment or expectations. Your therapist is there to support you, 
+            whether you want to share your thoughts, explore your feelings, or simply sit in silence.
+            It's entirely up to you how you want to use the time. Therapy is about empowerment and self-discovery,
+            and your therapist is there to walk alongside you on your journey, wherever it may lead.</dd>
+        
+        <dt class="faq">Is therapy confidential?</dt>
+        <dd>Absolutely. Your privacy is our priority. Everything shared in therapy stays confidential between you and your therapist.
+            It's a safe, judgment-free zone for you to express yourself freely and work towards your goals.</dd>
+    
+
+        <dt class="faq">What if I feel uncomfortable talking about my emotions?</dt>
+        <dd>It's completely normal to feel uncomfortable discussing feelings at first. Therapy is a gradual process, 
+            and your therapist is here to support you every step of the way. They'll provide a safe space and help you 
+            navigate any challenges that arise as you open up. 
+            Remember, therapy is a journey, and it's okay to take your time</dd>
+        
+        <dt class="faq">How common is therapy?</dt>
+        <dd>Therapy is increasingly common and valued by people from all backgrounds, including men. It's a proactive step for addressing challenges,
+            fostering personal growth, and improving well-being. Seeking therapy reflects strength and a commitment 
+            to self-care and mental health</dd>
+    </dl>
+</div>
+</div>
+</div>
+
+
+<footer id="footer">
+    <div class="footer-content">
+      <p class="copyright">&copy; 2024 Strong Minds Therapy. All rights reserved.</p>
+    </div>
+    <div class="footer-content">
+      <a class="footer-email" href="mailto:strongmindstherapy@gmail.com">
+        <i class="fa-regular fa-envelope"></i> 
+        strongmindstherapy@gmail.com
+      </a>
+    </div>
+  </footer>
+
+<script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>
